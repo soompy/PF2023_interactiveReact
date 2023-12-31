@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    --color-border: #938F87;
+    --color-primary: #FEBE98;
+    --color-text: #181819;
+
+    --border01: 1px solid var(--color-border);
+    --border02: 6px solid var(--color-border);
+}
+
+.inner {
+    width: 1200px;
+    margin: auto;
+}
+
+#header {
+    width: 100%;
+    background: #dddddd;
+    padding: 20px 0;
+
+    .inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 40px;
+        font-weight: bold;
+        font-family: 'Roboto Slab', serif;
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            font-size: 22px;
+            margin-right: 20px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.area {
+    width: 1200px;
+    margin: auto;
+}
+
+
+.rotate-canvas-wrapper {        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
+    > {
+        canvas {
+            width: 50vmin;
+            height: 50vmin;
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+    }
+}
