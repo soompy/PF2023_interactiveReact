@@ -43,6 +43,7 @@ body {
         li {
             font-size: 22px;
             margin-right: 20px;
+            cursor: pointer;
 
             &:last-child {
                 margin-right: 0;
@@ -54,6 +55,18 @@ body {
 .area {
     width: 1200px;
     margin: auto;
+
+    &.area-list {
+        .list-title {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #cccccc;
+            .title {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+    }
 }
 
 
@@ -71,5 +84,47 @@ body {
             box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.2);
             background-color: rgba(0, 0, 0, 0.02);
         }
+    }
+}
+
+.list-wrapper {
+    li {
+        display: flex;
+        align-items: center;
+        a {
+            img {
+                object-fit: cover;
+                width: 180px;
+                height: 120px;
+            }
+        }
+
+        .list-cont {
+            margin-left: 10px;         
+            .titles {
+                a {
+                    display: block;
+                    font-size: 16px;
+                    font-weight: bold;
+                }                
+            }
+    
+            .lead {
+                font-size: 14px;
+                line-height: 16px;
+                margin: 10px 0;
+            }
+    
+            .publication {
+                font-size: 14px;
+                em {
+                    margin-right: 10px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }        
     }
 }

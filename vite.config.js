@@ -4,4 +4,7 @@ import sassPlugin from "vite-plugin-sass";
 
 export default defineConfig({
   plugins: [react(), sassPlugin()],
+  optimizeDeps: {
+    include: ['@fortawesome/react-fontawesome', '@fortawesome/free-regular-svg-icons'],
+  },
 });
