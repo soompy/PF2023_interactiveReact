@@ -1,16 +1,14 @@
-// import '@/styles/globals.css'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import React from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import List from "./pages/List";
 import RotateCanvas from "./pages/matter";
 
 const client = new ApolloClient({
-  uri: "https://koreanjson.com/comments",
-  cache: new InMemoryCache(),
+  uri: "http://localhost:3000/posts",
+  cache: new InMemoryCache(),  
 });
 
-class MyApp extends React.Component {  
+class MyApp extends React.Component {
   render() {
     return (
       <ApolloProvider client={client}>
@@ -34,10 +32,10 @@ class MyApp extends React.Component {
 
             <section className="area area-list">
               <div className="list-title">
-                <h3 className="title">경제</h3>                
-              </div>              
+                <h3 className="title">경제</h3>
+              </div>
               <List></List>
-            </section>            
+            </section>
           </div>
         </>
       </ApolloProvider>
